@@ -1,0 +1,26 @@
+
+
+<!-- 路由的简单功能 -->
+<div>
+
+
+  <!-- 方法一：通过页面跳转 -->
+
+  <!-- /开头是说要导航到根路由 -->
+  <!-- routerLink指令用来帮你指向导航到的页面 -->
+  <a [routerLink]="['/']">页面一</a>
+  <a [routerLink]="['/02']">页面二</a>
+
+
+  <!-- 方法二：通过控制器方法调用对象跳转 -->
+  
+  <!-- 把toProductDetails()方法绑定到button上 -->
+  <!-- routerLink传的东西和toProductDetails()方法里面的router.navigate一样 -->
+  <input type="button" value="商品详情" (click)="toProductDetails()">
+
+  <!-- 插座用来路由到的页面内容会显示到router-outlet的后面 -->
+  <router-outlet></router-outlet>
+</div>
+
+
+
